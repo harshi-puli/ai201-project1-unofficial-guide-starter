@@ -25,13 +25,13 @@ This knowledge is usually pretty hard to find as the best food for a student can
 | # | Source | Type | URL or file path |
 |---|--------|------|-----------------|
 | 1 | Berkeley Menu | Website | https://dining.berkeley.edu/menus/ |
-| 2 | Reddit | Subreddit/Thread | https://www.reddit.com/r/berkeleyca/comments/1ngybii/ive_tried_well_over_a_100_restaurants_around/|
-| 3 | Reddit | Subreddit/Thread | https://www.reddit.com/r/berkeley/comments/1lfjqxf/absolute_best_eats_in_berkeley/ |
-| 4 | Reddit | Subreddit/Thread  | https://www.reddit.com/r/berkeley/comments/1ent0x5/favorite_food_spots_in_berkeley/ |
+| 2 | DailyCal | Website/Blog | https://www.dailycal.org/a-uc-berkeley-foodie-s-guide-to-campus-eateries/article_9823ab86-61ca-42d8-9418-06f11251be3b.htmlive_tried_well_over_a_100_restaurants_around/|
+| 3 | DailyCal | Website/Blog | https://www.dailycal.org/blogs/food-blog/tour-around-berkeley-s-best-coffee-and-study-spots/article_6c1f73a1-d93c-4f7f-a52c-1889db00589f.htmlabsolute_best_eats_in_berkeley/ |
+| 4 | DailyCal | Website/Blog  | https://www.dailycal.org/blogs/a-taste-of-berkeley-s-plant-based-and-sustainable-eats/article_e76f9d3c-bdcd-456d-99bd-f7b17ab65b6d.htmlfavorite_food_spots_in_berkeley/ |
 | 5 | Travelling Foodie | Website/Blog | https://travellingfoodie.net/places-to-eat-in-berkeley/ |
-| 6 | Yelp | Website | https://www.yelp.com/search?find_desc=Good+Food&find_loc=Berkeley%2C+CA |
+| 6 | DailyCal | Website/Blog | https://www.dailycal.org/2025-best-of-berkeley-food-edition/article_39fd173d-688c-4262-b429-d2051c998c98.html |
 | 7 | Michelin Guide | Website | https://guide.michelin.com/us/en/california/berkeley/restaurants |
-| 8 | OpenTable | Website | https://www.opentable.com/region/san-francisco/east-bay-restaurants |
+| 8 | SF Eater | Website | https://sf.eater.com/maps/best-restaurants-berkeley |
 | 9 | GrubHub | Website | https://www.grubhub.com/search?orderMethod=delivery&locationMode=DELIVERY&facetSet=umamiV6&pageSize=36&hideHateos=true&searchMetrics=true&latitude=37.87152099&longitude=-122.27304078&geohash=9q9p3w73xehw&sortSetId=umamiV3&countOmittingTimes=true&tab=all&includeOffers=true&featureControl=fastTagBadges%3Atrue |
 | 10 | DailyCal | Website/Blog | https://www.dailycal.org/blogs/food-blog/best-breakfast-spots-in-berkeley/article_0ba9913b-da5a-4fd8-9966-f0719abc9e1e.html |
 
