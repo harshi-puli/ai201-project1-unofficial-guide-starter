@@ -14,6 +14,10 @@
      Example: "Student reviews of CS professors at [university] — useful because official
      course descriptions don't reflect teaching style, exam difficulty, or workload." -->
 
+The domain of my project focuses on providing students with the best options for food spots that are popular with other students (Specifically UC Berkeley students). 
+
+This knowledge is usually pretty hard to find as the best food for a student can depend on if they are in the dorms with access to cafeterias meaning they use school based menu sites or simply prefer finding food recommendations off of reddit, snackpass, etc. There is a lot of sources to look through so this LLM allows the user to find everything with ease. 
+
 ---
 
 ## Document Sources
@@ -24,16 +28,16 @@
 
 | # | Source | Type | URL or file path |
 |---|--------|------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
+| 1 | Berkeley Menu | Website | https://dining.berkeley.edu/menus/ |
+| 2 | Reddit | Subreddit/Thread | https://www.reddit.com/r/berkeleyca/comments/1ngybii/ive_tried_well_over_a_100_restaurants_around/|
+| 3 | Reddit | Subreddit/Thread | https://www.reddit.com/r/berkeley/comments/1lfjqxf/absolute_best_eats_in_berkeley/ |
+| 4 | Reddit | Subreddit/Thread  | https://www.reddit.com/r/berkeley/comments/1ent0x5/favorite_food_spots_in_berkeley/ |
+| 5 | Travelling Foodie | Website/Blog | https://travellingfoodie.net/places-to-eat-in-berkeley/ |
+| 6 | Yelp | Website | https://www.yelp.com/search?find_desc=Good+Food&find_loc=Berkeley%2C+CA |
+| 7 | Michelin Guide | Website | https://guide.michelin.com/us/en/california/berkeley/restaurants |
+| 8 | OpenTable | Website | https://www.opentable.com/region/san-francisco/east-bay-restaurants |
+| 9 | GrubHub | Website | https://www.grubhub.com/search?orderMethod=delivery&locationMode=DELIVERY&facetSet=umamiV6&pageSize=36&hideHateos=true&searchMetrics=true&latitude=37.87152099&longitude=-122.27304078&geohash=9q9p3w73xehw&sortSetId=umamiV3&countOmittingTimes=true&tab=all&includeOffers=true&featureControl=fastTagBadges%3Atrue |
+| 10 | DailyCal | Website/Blog | https://www.dailycal.org/blogs/food-blog/best-breakfast-spots-in-berkeley/article_0ba9913b-da5a-4fd8-9966-f0719abc9e1e.html |
 
 ---
 

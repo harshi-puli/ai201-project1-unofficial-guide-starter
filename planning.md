@@ -11,6 +11,10 @@
 
 <!-- What domain did you choose? Why is this knowledge valuable and hard to find through official channels? -->
 
+The domain of my project focuses on providing students with the best options for food spots that are popular with other students (Specifically UC Berkeley students). 
+
+This knowledge is usually pretty hard to find as the best food for a student can depend on if they are in the dorms with access to cafeterias meaning they use school based menu sites or simply prefer finding food recommendations off of reddit, snackpass, etc. There is a lot of sources to look through so this LLM allows the user to find everything with ease. 
+
 ---
 
 ## Documents
@@ -18,18 +22,19 @@
 <!-- List your specific sources: URLs, subreddit names, forum threads, or file descriptions.
      Aim for at least 10 sources that together cover different subtopics or perspectives within your domain. -->
 
-| # | Source | Description | URL or location |
-|---|--------|-------------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
+| # | Source | Type | URL or file path |
+|---|--------|------|-----------------|
+| 1 | Berkeley Menu | Website | https://dining.berkeley.edu/menus/ |
+| 2 | Reddit | Subreddit/Thread | https://www.reddit.com/r/berkeleyca/comments/1ngybii/ive_tried_well_over_a_100_restaurants_around/|
+| 3 | Reddit | Subreddit/Thread | https://www.reddit.com/r/berkeley/comments/1lfjqxf/absolute_best_eats_in_berkeley/ |
+| 4 | Reddit | Subreddit/Thread  | https://www.reddit.com/r/berkeley/comments/1ent0x5/favorite_food_spots_in_berkeley/ |
+| 5 | Travelling Foodie | Website/Blog | https://travellingfoodie.net/places-to-eat-in-berkeley/ |
+| 6 | Yelp | Website | https://www.yelp.com/search?find_desc=Good+Food&find_loc=Berkeley%2C+CA |
+| 7 | Michelin Guide | Website | https://guide.michelin.com/us/en/california/berkeley/restaurants |
+| 8 | OpenTable | Website | https://www.opentable.com/region/san-francisco/east-bay-restaurants |
+| 9 | GrubHub | Website | https://www.grubhub.com/search?orderMethod=delivery&locationMode=DELIVERY&facetSet=umamiV6&pageSize=36&hideHateos=true&searchMetrics=true&latitude=37.87152099&longitude=-122.27304078&geohash=9q9p3w73xehw&sortSetId=umamiV3&countOmittingTimes=true&tab=all&includeOffers=true&featureControl=fastTagBadges%3Atrue |
+| 10 | DailyCal | Website/Blog | https://www.dailycal.org/blogs/food-blog/best-breakfast-spots-in-berkeley/article_0ba9913b-da5a-4fd8-9966-f0719abc9e1e.html |
+
 
 ---
 
@@ -40,11 +45,11 @@
      numbers fit the structure of your documents.
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
-**Chunk size:**
+**Chunk size:** ~ 200 characters
 
-**Overlap:**
+**Overlap:** ~ 30 characters
 
-**Reasoning:**
+**Reasoning:** The majority of my sources contain small sentence segments as they are mostly short reviews, meaning that smaller chunk sizes are probably the most efficient 
 
 ---
 
@@ -56,11 +61,11 @@
      would you weigh in choosing a different embedding model — context length, multilingual
      support, accuracy on domain-specific text, latency? -->
 
-**Embedding model:**
+**Embedding model:** bge-small-en-v1.5
 
-**Top-k:**
+**Top-k:** 7 
 
-**Production tradeoff reflection:**
+**Production tradeoff reflection:** The model I chose is fast and cheap but might consider certain opinion-based words closer together than they are (e.g. Decent & Incredible). 
 
 ---
 
@@ -73,11 +78,11 @@
 
 | # | Question | Expected answer |
 |---|----------|-----------------|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
+| 1 | What is dining hall at UC Berkeley has the most vegan options for dinner today? | (Pulls from Berkeley Menu) Clark Kerr has the most vegan options! |
+| 2 | What are some good breakfast options around UC Berkeley? | Some options include La Note, Crepevine, and Eggy's neighborhood Kitchen |
+| 3 | I want to splurge a little, show me a high end restaurant that is a little bit more on the expensive side | Try Chez Panisse, an Expensive Michelin Restuarant near you. |
+| 4 | Show me french cuisine near me | Rêve Bistro is a french restuarant near your area. |
+| 5 | Show me a cute cafe near me | Try Cafe Gara down telegraph. |
 
 ---
 
@@ -87,9 +92,9 @@
      Consider: noisy or inconsistent documents, missing source attribution, off-topic
      retrieval, chunks that split key information across boundaries. -->
 
-1.
+1. While the majority of my text data is on the shorter side, I feel that there is a slight inconsistency in lengths from document to document, so retrieval might not be as effective on some platforms in comparison to others with the chunk size I chose. 
 
-2.
+2. Some of the information on reddit is a little bit off-topic. For instance, users might be talking about something completely different from food on the replies to the threads I chose. 
 
 ---
 
@@ -100,6 +105,32 @@
      Label each stage with the tool or library you're using.
      You can use ASCII art, a Mermaid diagram, or embed a sketch as an image.
      You'll use this diagram as context when prompting AI tools to implement each stage. -->
+
+Used a Mermaid Diagram!!
+```mermaid
+flowchart TD
+    A["Document Ingestion"]:::indigo --> B["Chunking"]:::teal
+    B --> C["Embedding (bge-small-en-v1.5)"]:::violet
+    C --> D["Vector Store (FAISS)"]:::sky
+    D --> E["Retrieval (Top-k = 7)"]:::orange
+    E --> F["Generation with Claude"]:::green
+
+    subgraph G["Tradeoff Reflection"]
+        G1["Fast and cost-efficient model"]:::lime
+        G2["Possible semantic misalignment"]:::rose
+    end
+
+    C -.-> G
+
+    classDef indigo stroke:#818cf8,fill:#eef2ff
+    classDef teal stroke:#2dd4bf,fill:#f0fdfa
+    classDef violet stroke:#a78bfa,fill:#f5f3ff
+    classDef sky stroke:#38bdf8,fill:#f0f9ff
+    classDef orange stroke:#fb923c,fill:#fff7ed
+    classDef green stroke:#4ade80,fill:#f0fdf4
+    classDef lime stroke:#a3e635,fill:#f7fee7
+    classDef rose stroke:#fb7185,fill:#fff1f2
+```
 
 ---
 
